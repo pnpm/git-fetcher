@@ -1,6 +1,6 @@
 dependencies:
   '@types/node': 8.0.53
-  dint: 1.0.0
+  dint: 2.0.0
   execa: 0.8.0
   rimraf-then: 1.0.1
 devDependencies:
@@ -47,10 +47,6 @@ packages:
   /balanced-match/1.0.0:
     resolution:
       integrity: sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
-  /bluebird/3.5.1:
-    dev: false
-    resolution:
-      integrity: sha512-MKiLiV+I1AA596t9w1sQJ8jkiSr5+ZKi0WKrYGUn6d1Fx+Ij4tIj+m2WMQSGczs5jZVxV339chE8iwk6F64wjA==
   /brace-expansion/1.1.8:
     dependencies:
       balanced-match: 1.0.0
@@ -116,17 +112,18 @@ packages:
       node: '>=0.3.1'
     resolution:
       integrity: sha512-QpVuMTEoJMF7cKzi6bvWhRulU1fZqZnvyVQgNhPaxxuTYwyjn/j1v9falseQ/uXWwPnO56RBfwtg4h/EQXmucA==
-  /dint/1.0.0:
+  /dint/2.0.0:
     dependencies:
-      bluebird: 3.5.1
       graceful-fs: 4.1.11
+      mz: 2.7.0
       p-every: 1.0.2
-      ssri: 4.1.6
+      p-limit: 1.1.0
+      ssri: 5.0.0
     dev: false
     engines:
       node: '>=4'
     resolution:
-      integrity: sha1-S/7IGLOmVysyi96o0FHM1d5YDEQ=
+      integrity: sha512-lxYQEEebR4G/uGaubo5TBi9H6FJGSR8zJGyt5AhFHbmWyH73e+EenuntCytzKcDpPl2K2v2slXUTY9Ch39kKRQ==
   /escape-string-regexp/1.0.5:
     dev: true
     engines:
@@ -227,6 +224,14 @@ packages:
       brace-expansion: 1.1.8
     resolution:
       integrity: sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
+  /mz/2.7.0:
+    dependencies:
+      any-promise: 1.3.0
+      object-assign: 4.1.1
+      thenify-all: 1.6.0
+    dev: false
+    resolution:
+      integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==
   /npm-run-path/2.0.2:
     dependencies:
       path-key: 2.0.1
@@ -235,6 +240,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-NakjLfo11wZ7TLLd8jV7GHFTbF8=
+  /object-assign/4.1.1:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
   /once/1.4.0:
     dependencies:
       wrappy: 1.0.2
@@ -254,6 +265,12 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-P7z7FbiZpEEjs0ttzBi3JDNqLK4=
+  /p-limit/1.1.0:
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-sH/y2aXYi+yAYDWJWiurZqJ5iLw=
   /p-map/1.2.0:
     dev: false
     engines:
@@ -323,12 +340,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
-  /ssri/4.1.6:
+  /ssri/5.0.0:
     dependencies:
       safe-buffer: 5.1.1
     dev: false
     resolution:
-      integrity: sha512-WUbCdgSAMQjTFZRWvSPpauryvREEA+Krn19rx67UlJEJx/M192ZHxMmJXjZ4tkdFm+Sb0SXGlENeQVlA5wY7kA==
+      integrity: sha512-728D4yoQcQm1ooZvSbywLkV1RjfITZXh0oWrhM/lnsx3nAHx7LsRGJWB/YyvoceAYRq98xqbstiN4JBv1/wNHg==
   /strip-ansi/3.0.1:
     dependencies:
       ansi-regex: 2.1.1
@@ -357,6 +374,20 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-vnoN5ITexcXN34s9WRJQRJEvY1s=
+  /thenify-all/1.6.0:
+    dependencies:
+      thenify: 3.3.0
+    dev: false
+    engines:
+      node: '>=0.8'
+    resolution:
+      integrity: sha1-GhkY1ALY/D+Y+/I02wvMjMEOlyY=
+  /thenify/3.3.0:
+    dependencies:
+      any-promise: 1.3.0
+    dev: false
+    resolution:
+      integrity: sha1-5p44obq+lpsBCCB5eLn2K4hgSDk=
   /tslib/1.8.0:
     dev: true
     resolution:
@@ -413,7 +444,7 @@ shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^8.0.53
-  dint: ^1.0.0
+  dint: ^2.0.0
   execa: ^0.8.0
   rimraf: ^2.6.2
   rimraf-then: ^1.0.1

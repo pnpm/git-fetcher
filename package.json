@@ -32,7 +32,7 @@
   "homepage": "https://github.com/pnpm/git-fetcher#readme",
   "dependencies": {
     "@types/node": "^8.0.53",
-    "dint": "^1.0.0",
+    "dint": "^2.0.0",
     "execa": "^0.8.0",
     "rimraf-then": "^1.0.1"
   },

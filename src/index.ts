@@ -3,24 +3,21 @@ import execa = require('execa')
 import path = require('path')
 import rimraf = require('rimraf-then')
 
-/**
- * clone a git repository.
- */
-export default async function (
-  resolution: {
-    repo: string,
-    commit: string,
-  },
-  dest: string,
-) {
-  await execGit(['clone', resolution.repo, dest])
-  await execGit(['checkout', resolution.commit], {cwd: dest})
-  // removing /.git to make directory integrity calculation faster
-  await rimraf(path.join(dest, '.git'))
-  const dirIntegrity = await dint.from(dest)
+export default () => {
   return {
-    headers: dirIntegrity,
-    integrityPromise: Promise.resolve(dirIntegrity),
+    git: async function fetchFromGit (
+      resolution: {
+        repo: string,
+        commit: string,
+      },
+      dest: string,
+    ) {
+      await execGit(['clone', resolution.repo, dest])
+      await execGit(['checkout', resolution.commit], {cwd: dest})
+      // removing /.git to make directory integrity calculation faster
+      await rimraf(path.join(dest, '.git'))
+      return dint.from(dest)
+    },
   }
 }
 

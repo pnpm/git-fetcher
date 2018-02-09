@@ -1,6 +1,7 @@
 import dint = require('dint')
 import execa = require('execa')
 import path = require('path')
+import pathTemp = require('path-temp')
 import rimraf = require('rimraf-then')
 
 export default () => {
@@ -10,13 +11,17 @@ export default () => {
         repo: string,
         commit: string,
       },
-      dest: string,
+      targetFolder: string,
     ) {
-      await execGit(['clone', resolution.repo, dest])
-      await execGit(['checkout', resolution.commit], {cwd: dest})
+      const tempLocation = pathTemp(targetFolder)
+      await execGit(['clone', resolution.repo, tempLocation])
+      await execGit(['checkout', resolution.commit], {cwd: tempLocation})
       // removing /.git to make directory integrity calculation faster
-      await rimraf(path.join(dest, '.git'))
-      return dint.from(dest)
+      await rimraf(path.join(tempLocation, '.git'))
+      return {
+        filesIndex: dint.from(tempLocation),
+        tempLocation,
+      }
     },
   }
 }

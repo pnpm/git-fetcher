@@ -9,6 +9,6 @@ test('fetch', async t => {
     commit: 'c9b30e71d704cd30fa71f2edd1ecc7dcc4985493',
   }, tempy.directory())
   t.ok(fetchResult.tempLocation)
-  t.ok(fetchResult.filesIndex)
+  t.ok(fetchResult.filesIndex['package.json'])
   t.end()
 })

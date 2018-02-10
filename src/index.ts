@@ -19,7 +19,7 @@ export default () => {
       // removing /.git to make directory integrity calculation faster
       await rimraf(path.join(tempLocation, '.git'))
       return {
-        filesIndex: dint.from(tempLocation),
+        filesIndex: await dint.from(tempLocation),
         tempLocation,
       }
     },

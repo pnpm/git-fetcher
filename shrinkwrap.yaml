@@ -1,5 +1,6 @@
 dependencies:
-  '@types/node': 9.6.15
+  '@pnpm/git-fetcher': 'link:../__package_previews__/git-fetcher/@pnpm/git-fetcher'
+  '@types/node': 10.0.8
   dint: 3.0.0
   execa: 0.10.0
   path-temp: 1.0.0
@@ -35,13 +36,13 @@ packages:
       integrity: sha512-Awzcm+UsGmUZaZXkLH5efJEos9UICA4PIXpedyiY7Mg4LXVUtrGtX/jYNkuxj3x/bwh+7LnEvbBV4GpscxsFjw==
   /@types/fs-extra/5.0.2:
     dependencies:
-      '@types/node': 9.6.15
+      '@types/node': 10.0.8
     dev: true
     resolution:
       integrity: sha512-Q3FWsbdmkQd1ib11A4XNWQvRD//5KpPoGawA8aB2DR7pWKoW9XQv3+dGxD/Z1eVFze23Okdo27ZQytVFlweKvQ==
   /@types/got/8.3.1:
     dependencies:
-      '@types/node': 9.6.15
+      '@types/node': 10.0.8
     dev: true
     resolution:
       integrity: sha512-CGEPw67/Ub6gNMusk062tueurxN+HyjDCvYl4QVBKiSO+fqluXmRX/wSqST/4RtKth4mz8lDZiaZIpXr/uPROg==
@@ -51,20 +52,16 @@ packages:
       integrity: sha512-NrH6jPlV77QCVPhAHofWeiOr77TgpKt82c2RVxSBChWBJqyY/u4ngl3CA4mcsAg/w7rNLrkR7dkObMV0ihLLXw==
   /@types/mz/0.0.32:
     dependencies:
-      '@types/node': 9.6.15
+      '@types/node': 10.0.8
     dev: true
     resolution:
       integrity: sha512-cy3yebKhrHuOcrJGkfwNHhpTXQLgmXSv1BX+4p32j+VUQ6aP2eJ5cL7OvGcAQx75fCTFaAIIAKewvqL+iwSd4g==
   /@types/node/10.0.8:
-    dev: true
     resolution:
       integrity: sha512-MFFKFv2X4iZy/NFl1m1E8uwE1CR96SGwJjgHma09PLtqOWoj3nqeJHMG+P/EuJGVLvC2I6MdQRQsr4TcRduIow==
-  /@types/node/9.6.15:
-    resolution:
-      integrity: sha512-16zIiQkIZBc1ZpfrOZZZ/6LKDixPiAIZq5q1YE1stxG4Ic1VmQlkNNWGBydqBFcX8eS+m/Dd4z5HzDa+q0b2Xg==
   /@types/tape/4.2.32:
     dependencies:
-      '@types/node': 9.6.15
+      '@types/node': 10.0.8
     dev: true
     resolution:
       integrity: sha512-xil0KO5wkPoixdBWGIGolPv9dekf6dVkjjJLAFYchfKcd4DICou67rgGCIO7wAh3i5Ff/6j9IDgZz+GU9cMaqQ==
@@ -1427,7 +1424,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 6
 shrinkwrapVersion: 3
 specifiers:
-  '@types/node': ^9.3.0
+  '@types/node': ^9.3.0 || 10
   '@types/tape': ^4.2.31
   '@types/tempy': ^0.1.0
   dint: ^3.0.0

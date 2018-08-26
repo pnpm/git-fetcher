@@ -33,7 +33,7 @@
   "dependencies": {
     "@types/node": "^9.3.0 || 10",
     "dint": "^3.0.0",
-    "execa": "^0.10.0",
+    "execa": "^1.0.0",
     "path-temp": "^1.0.0",
     "rimraf-then": "^1.0.1"
   },

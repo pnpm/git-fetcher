@@ -1,3 +1,5 @@
+> this package was moved to https://github.com/pnpm/pnpm
+
 # @pnpm/git-fetcher
 
 > Fetcher for git-hosted packages
